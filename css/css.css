@@ -42,6 +42,7 @@ h1 {
 }
 img {
   max-width: 100%;
+  
 }
 /*UTILS*/
 .no-margin {
@@ -129,12 +130,17 @@ img {
     font-weight: uppercase;
     font-weight: 700;
     margin-bottom: 2rem;
+    border: none;
 }
 @media(min-width:768px){
     .boton{
         display:inline-block
     }
 }
+.boton:hover{
+  cursor: pointer;
+}
+
 .boton--primario{
     background-color: var(--black);
 }
@@ -149,16 +155,20 @@ img {
   border: none;
   margin-bottom: 0;
 }
-.widget-curso__label{
+.widget-curso__label,
+.curso__label{
   font-family:var(--fuenteHeading);
   font-weight:bold
 
 }
-.widget-curso__info{
+.widget-curso__info,
+.curso__info{
   font-weight: normal;
 }
 .widget-curso__label,
-.widget-curso__info{
+.widget-curso__info,
+.curso__label,
+.curso__info{
   font-size: 2rem;
 }
 .footer{
@@ -175,4 +185,56 @@ img {
   grid-template-columns: repeat(2,1fr);
   column-gap: 2rem;
   }
+}
+
+/* cursos */
+
+.curso{
+  padding:3rem 0;
+  border-bottom: 1px solid var(--gris);
+}
+@media(min-width:768px){
+  .curso{
+    display: grid;
+    grid-template-columns:1fr 2fr;
+    column-gap: 2rem;
+  }
+}
+
+.curso:last-of-type{
+  border: none;
+}
+.curso__imagen{
+  align-self: center;
+}
+.img-responsive{
+  text-align: center;
+}
+.contacto-bg{
+  background-image: url(../img/titu.png);
+  height: 40rem;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.formulario{
+  background-color: var(--white);
+  margin: -5rem auto  0 auto;
+  width:85%;
+  padding: 5rem;
+}
+.campo{
+display:flex;
+margin-bottom: 3rem;
+
+}
+.campo__label{
+  flex: 0 0 9rem;
+  text-align: right;
+}
+.campo__field{
+  flex: 1;
+  border: 1px solid var(--gris);
+}
+.campo__field--textarea{
+  height:20rem
 }
